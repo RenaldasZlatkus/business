@@ -20,3 +20,9 @@ require './mandrill.rb'
  	@title= "Contact page"   
  	erb :contact
  end
+
+ post "/contact" do
+	send_mail params[:subject], params[:name], params[:message], params[:email_address]
+	puts "MY PARAMS ARE" + params.inspect
+	"Message sent"
+end
