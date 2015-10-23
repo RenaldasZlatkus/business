@@ -1,15 +1,24 @@
+body{
+	width: 900px;
+	margin: 0px auto;
+}
+
 h1{
 	float: left;
 	clear: left;
 }
 
-.image-wrapper:nth-child(2){
+h1 + .image-wrapper {
 	clear: left;
 }
 
-input{
-	margin: 0px;
-	padding: 0px;
+input.order{
+	width: 20px;
+	margin-top: 5px;
+}
+
+.bottom-part{
+	clear: both;
 }
 
 div.image-wrapper{
@@ -29,17 +38,13 @@ div.image-wrapper{
 	vertical-align: middle;
 }
 
-.table-row {
+.table-row{
 	display: table-row;
 }
 
 img{
 	width: 90%;
 	vertical-align: middle;
-}
-
-img:hover{
-	border: 1px solid white;
 }
 
 #lightbox-outer{

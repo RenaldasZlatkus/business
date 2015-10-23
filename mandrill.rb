@@ -15,3 +15,9 @@ def send_mail subject, name, message_body, email_address
 	sending = Mandrill::API.new.messages.send message
 	puts sending
 end
+
+def send_order order, name, email, address
+	order_text = "The following order has been placed: " + order.inspect + " to " + name + " at " + address
+
+	send_mail 'New order has been placed', name, order_text, email
+end
