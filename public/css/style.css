@@ -1,0 +1,77 @@
+#toppings{
+	margin-bottom: 20px;
+}
+
+#sides{
+	margin-bottom: 20px;
+}
+
+#desserts{
+	margin-bottom: 20px;
+}
+
+#drinks{
+	margin-bottom: 20px;
+}
+
+h1{
+	float: left;
+	clear: left;
+}
+
+.image-wrapper:nth-child(2){
+	clear: left;
+}
+
+
+
+div.image-wrapper{
+	float: left;
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+	padding: 5px;
+	margin: 5px;
+	vertical-align: middle;
+	display: table;
+}
+
+.second-wrapper{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+img{
+	width: 90%;
+	vertical-align: middle;
+}
+
+img:hover{
+	border: 1px solid white;
+}
+
+#lightbox-outer{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 204, 204, .8);
+	text-align: center;
+}
+
+#lightbox-outer:before{
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+#lightbox-inner{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#lightbox-image{
+	width: 550px;
+}
