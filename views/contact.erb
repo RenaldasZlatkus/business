@@ -1,19 +1,24 @@
-<form method="POST" action="/contact">
-		<label for="subject">Subject: </label>
-		<br>
-		<input type="text" name="subject">
-		<br>
-		<label for="message">Message: </label>
-		<br>
-		<textarea name="message"></textarea>
-		<br>
-		<label for="name">Name: </label>
-		<br>
-		<input type="text" name="name">
-		<br>
-		<label for="email_address">Email: </label>
-		<br>
-		<input type="text" name="email_address">
-		<br>
-		<input type="submit"> 
-</form>
+<body class="page-wrapper">
+	<div class="form-wrapper">
+		<form method="POST" action="/contact" id="contact-form">
+			<h1> Contact Us! </h1>
+			<label for="subject">Subject: </label>
+			<br>
+			<input type="text" name="subject" class="extra">
+			<br>
+			<label for="message">Message: </label>
+			<br>
+			<textarea name="message"></textarea>
+			<br>
+			<label for="name">Name: </label>
+			<br>
+			<input type="text" name="name" class="extra">
+			<br>
+			<label for="email_address">Email: </label>
+			<br>
+			<input type="text" name="email_address" class="extra">
+			<br>
+			<input type="submit" value="Send!" class="order-button"> 
+		</form>
+	</div>
+</body>

@@ -1,99 +1,99 @@
-<body>
-<form method="POST" action="/order">
-	<div class="top-part">
-	<h1>Toppings</h1>
+<body class="page-wrapper">
+	<form method="POST" action="/order" id="order-form">
+		<div class="top-part">
+			<h1>Toppings</h1>
 
-	<% @toppings.each do |topping| %>
-		<div class="image-wrapper">
-			<div class="table-row">
-				<a href="#" class="second-wrapper">
-					<img src="<%= topping[:image_url]%>" alt="<%= topping[:name]%>"> 
-				</a>
+			<% @toppings.each do |topping| %>
+			<div class="image-wrapper">
+				<div class="table-row">
+					<a href="#" class="second-wrapper">
+						<img src="<%= topping[:image_url]%>" alt="<%= topping[:name]%>"> 
+					</a>
 
+				</div>
+				<div class="table-row">
+					<%= topping[:name] %>
+					<input class="order" type="text" name="<%= topping[:name].downcase %>">
+				</div>
+			</div>		
+			<% end %>
+
+			<h1>Sides</h1>
+
+			<% @sides.each do |side| %>
+			<div class="image-wrapper">
+				<div class="table-row">
+					<a href="#" class="second-wrapper">
+						<img src="<%= side[:image_url] %>" alt="<%= side[:name]%>"> 
+					</a>
+				</div>
+
+				<div class="table-row">
+					<%= side[:name] %>
+					<input class="order" type="text" name="<%= side[:name].downcase %>">
+				</div>
+			</div>		
+			<% end %>
+
+			<h1>Desserts</h1>
+
+			<% @desserts.each do |dessert| %>
+			<div class="image-wrapper">
+				<div class="table-row">
+					<a href="#" class="second-wrapper">
+						<img src="<%= dessert[:image_url]%>" alt="<%= dessert[:name]%>"> 
+					</a>
+				</div>
+
+				<div class="table-row">
+					<%= dessert[:name] %>
+					<input class="order" type="text" name="<%= dessert[:name].downcase %>">
+				</div>
+			</div>		
+			<% end %>
+
+			<h1>Drinks</h1>
+
+			<% @drinks.each do |drink| %>
+			<div class="image-wrapper">
+				<div class="table-row">
+					<a href="#" class="second-wrapper">
+						<img src="<%= drink[:image_url]%>" alt="<%= drink[:name]%>"> 
+					</a>
+				</div>
+
+				<div class="table-row">
+					<%= drink[:name] %>
+					<input class="order" type="text" name="<%= drink[:name].downcase %>">
+				</div>
+			</div>		
+			<% end %>
+
+		</div>
+
+		<div id="lightbox-outer">
+			<div id="lightbox-inner">
+				<img id="lightbox-image" src="">
+			</div>		
+		</div>
+
+
+			<div class="extra-info">
+				<label for="name">Name: </label>
+				<br>
+				<input class="extra" type="text" name="name">
+				<br>
+				<label for="email_address">Email: </label>
+				<br>
+				<input class="extra" type="text" name="email_address">
+				<br>
+				<label for="address">Address: </label>
+				<br>
+				<textarea type="text" name="address"></textarea>
+				<br>
+				<input type="submit" value="Order!" class="order-button"> 
 			</div>
-			<div class="table-row">
-				<%= topping[:name] %>
-				<input class="order" type="text" name="<%= topping[:name].downcase %>">
-			</div>
-		</div>		
-	<% end %>
-
-	<h1>Sides</h1>
-
-	<% @sides.each do |side| %>
-		<div class="image-wrapper">
-			<div class="table-row">
-				<a href="#" class="second-wrapper">
-					<img src="<%= side[:image_url] %>" alt="<%= side[:name]%>"> 
-				</a>
-			</div>
-			
-			<div class="table-row">
-				<%= side[:name] %>
-				<input class="order" type="text" name="<%= side[:name].downcase %>">
-			</div>
-		</div>		
-	<% end %>
-
-	<h1>Desserts</h1>
-
-	<% @desserts.each do |dessert| %>
-		<div class="image-wrapper">
-			<div class="table-row">
-				<a href="#" class="second-wrapper">
-					<img src="<%= dessert[:image_url]%>" alt="<%= dessert[:name]%>"> 
-				</a>
-			</div>
-
-			<div class="table-row">
-				<%= dessert[:name] %>
-				<input class="order" type="text" name="<%= dessert[:name].downcase %>">
-			</div>
-		</div>		
-	<% end %>
-
-	<h1>Drinks</h1>
-
-	<% @drinks.each do |drink| %>
-		<div class="image-wrapper">
-			<div class="table-row">
-				<a href="#" class="second-wrapper">
-					<img src="<%= drink[:image_url]%>" alt="<%= drink[:name]%>"> 
-				</a>
-			</div>
-
-			<div class="table-row">
-				<%= drink[:name] %>
-				<input class="order" type="text" name="<%= drink[:name].downcase %>">
-			</div>
-		</div>		
-	<% end %>
-
-	</div>
-
-	<div id="lightbox-outer">
-		<div id="lightbox-inner">
-			<img id="lightbox-image" src="">
-		</div>		
-	</div>
-
-
-	<div class="bottom-part">
-	<label for="name">Name: </label>
-	<br>
-	<input type="text" name="name">
-	<br>
-	<label for="email_address">Email: </label>
-	<br>
-	<input type="text" name="email_address">
-	<br>
-	<label for="address">Address: </label>
-	<br>
-	<textarea type="text" name="address"></textarea>
-	<br>
-	<input type="submit"> 
-	</div>
-</form>
+	</form>
 
 </body>
 
