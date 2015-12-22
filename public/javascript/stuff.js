@@ -14,6 +14,8 @@ function setupPage(){
 	outerWrapper.click(function(){
 		outerWrapper.hide();
 	});
+
+	
 }
 
 $(document).ready(setupPage)
