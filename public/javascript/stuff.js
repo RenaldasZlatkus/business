@@ -15,7 +15,17 @@ function setupPage(){
 		outerWrapper.hide();
 	});
 
-	
+	var mainContentContact = $("#contact-form");
+	mainContentContact.hide().slideDown(2000);
+
+	var mainContentAbout = $(".text-wrapper");
+	mainContentAbout.hide().slideDown(2000);
+
+	var mainContentOrder = $("#order-form");
+	mainContentOrder.hide().slideDown(4000);
+
+	var flashMessage = $(".flash");
+	flashMessage.show().slideUp(10000);
 }
 
 $(document).ready(setupPage)
